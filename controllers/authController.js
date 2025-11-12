@@ -60,3 +60,5 @@ exports.profile = (req, res) => {
     user: req.user,
   });
 };
+
+// this contains all logic related to authentication
