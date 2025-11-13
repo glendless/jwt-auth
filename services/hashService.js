@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 
 // create a function to hash a plain password
-exports.hashPassword = async (password) => {
+exports.hashPassword = async (plainPassword) => {
   //   bcrypt.hash generates a hashed version of the password
   // the number 10 is the salt round, which affects the hashing complexity
   return await bcrypt.hash(plainPassword, 10);

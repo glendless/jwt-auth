@@ -3,6 +3,7 @@ const router = express.Router();
 const authController = require("../controllers/authController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
+// todo
 // step 1. register route
 // user send their name, email, and password to this endpoint
 router.post("/register", authController.register);

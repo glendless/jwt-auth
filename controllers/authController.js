@@ -7,7 +7,7 @@ const { generateToken } = require("../services/jwtService");
 exports.register = async (req, res) => {
   try {
     //   get user input
-    const { username, email, password } = req.body;
+    const { name, email, password } = req.body;
 
     // step 1. check if user already exists
     const existingUser = await User.findOne({ email });
@@ -56,7 +56,7 @@ exports.login = async (req, res) => {
 exports.profile = (req, res) => {
   // res.user is set by auth middleware after token verification
   res.json({
-    message: `Welcome ${name} to your profile`,
+    message: `Welcome to your profile, ${req.user.name}`,
     user: req.user,
   });
 };
